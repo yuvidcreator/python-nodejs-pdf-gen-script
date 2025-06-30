@@ -1,0 +1,36 @@
+{
+  "name": "pdf_gen_script",
+  "version": "1.0.0",
+  "description": "NodeJS PDF Generation Project",
+  "main": "index.js",
+  "author": "AiGenomics India Pvt Ltd",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build:fonts": "node build-fonts.mjs"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "fontkit": "^2.0.4",
+    "fontmin": "^2.0.0",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module",
+  "keywords": [
+    "pdf",
+    "generator",
+    "puppeteer",
+    "ejs",
+    "font-optimization",
+    "performance"
+  ]
+}

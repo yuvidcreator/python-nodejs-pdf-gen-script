@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aptitude Plus - Page 7</title>
+    <style>
+        <%- customFonts %><%- customCSS %>
+    </style>
+</head>
+
+<body>
+    <div style="background:#FFF;">
+        <div style="padding-top:75px;">
+            <p
+                style="font-family:'Noto Sans KR',sans-serif;font-weight:600;color:#391A56;font-size:20px;text-align:center;line-height:1.8em;">
+                Which Career Path Would Suit Me Best?</p>
+            <hr style="width:73%;text-align:center;height:0.5px;color:#E2E2E3">
+        </div>
+
+        <% EDAPPGS006.ResultInfo.combination_3.forEach((item, outerIndex)=> {
+            const outerLoop = { index: outerIndex }; // Equivalent to outer_loop
+            %>
+            <% Object.entries(EDAPPGS006.ResultInfo.genetic_results).forEach((entry, innerLoopIndex)=> {
+                const [key, value] = entry;
+                %>
+                <% if (value.item_code===item) { %>
+                    <div class="row" style="margin-left:320px;margin-top:15px;">
+                        <div class="col-xs-5">
+                            <% if (outerLoop.index===1) { %>
+                                <div style="position: relative;width:90px;height:90px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+                                        <% if (value.item_code==="A" ) { %>
+                                            <path id="Polygon_9" data-name="Polygon 9"
+                                                d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                transform="translate(66.667) rotate(90)" fill="#76eefb" />
+                                            <% } else if (value.item_code==="C" ) { %>
+                                                <path id="Polygon_9" data-name="Polygon 9"
+                                                    d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                    transform="translate(66.667) rotate(90)" fill="#7582fb" />
+                                                <% } else if (value.item_code=="E" ) { %>
+                                                    <path id="Polygon_9" data-name="Polygon 9"
+                                                        d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                        transform="translate(66.667) rotate(90)" fill="#fb8c78" />
+                                                    <% } else if (value.item_code==="I" ) { %>
+                                                        <path id="Polygon_9" data-name="Polygon 9"
+                                                            d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                            transform="translate(66.667) rotate(90)" fill="#78fbb2" />
+                                                        <% } else if (value.item_code==="R" ) { %>
+                                                            <path id="Polygon_9" data-name="Polygon 9"
+                                                                d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                transform="translate(66.667) rotate(90)"
+                                                                fill="#cf74fc" />
+                                                            <% } else if (value.item_code==="S" ) { %>
+                                                                <path id="Polygon_9" data-name="Polygon 9"
+                                                                    d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                    transform="translate(66.667) rotate(90)"
+                                                                    fill="#ffe681" />
+                                                                <% } else { %>
+                                                                    <path id="Polygon_9" data-name="Polygon 9"
+                                                                        d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                        transform="translate(66.667) rotate(90)"
+                                                                        fill="#cf74fc" />
+                                                                    <% } %>
+                                    </svg>
+
+                                    <div
+                                        style="position: relative; top:-115%; color:#391A56;text-align:center;z-index:1; margin-left: -26px;">
+                                        <h3 style="font-family:'Georgia', sans-serif;;color:#391A56;font-size:20.5px;">
+                                            <%= item %>
+                                        </h3>
+                                        <p
+                                            style="font-family:'Noto Sans KR', sans-serif;font-size:11px;line-height:1.1em;margin-top:-20px;font-weight: 800;">
+                                            <% function formatHollandCode(text) { const textWithNewline=text + '\n' ;
+                                                const chunks=[]; for (let i=0; i < textWithNewline.length; i +=7) {
+                                                chunks.push(textWithNewline.slice(i, i + 7)); } return
+                                                chunks.join('-<br />');
+                                            }
+                                            %>
+                                            <%- formatHollandCode(value.holland_code) %>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p
+                                    style="font-family:NotoSansCJKkrLight;color:#C2C2C2;font-size:38px;margin-top:-80px;margin-left:75px;">
+                                    +
+                                </p>
+
+                                <% } else if (outerLoop.index===2) { %>
+                                    <div style="margin-top:-94px;margin-left:115px;">
+                                        <!--hexagon C-->
+                                        <div style="position: relative;width:90px;height:90px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"
+                                                viewBox="0 0 90 90">
+                                                <% if (value.item_code==="A" ) { %>
+                                                    <path id="Polygon_9" data-name="Polygon 9"
+                                                        d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                        transform="translate(66.667) rotate(90)" fill="#76eefb" />
+                                                    <% } else if (value.item_code==="C" ) { %>
+                                                        <path id="Polygon_9" data-name="Polygon 9"
+                                                            d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                            transform="translate(66.667) rotate(90)" fill="#7582fb" />
+                                                        <% } else if (value.item_code=="E" ) { %>
+                                                            <path id="Polygon_9" data-name="Polygon 9"
+                                                                d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                transform="translate(66.667) rotate(90)"
+                                                                fill="#fb8c78" />
+                                                            <% } else if (value.item_code==="I" ) { %>
+                                                                <path id="Polygon_9" data-name="Polygon 9"
+                                                                    d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                    transform="translate(66.667) rotate(90)"
+                                                                    fill="#78fbb2" />
+                                                                <% } else if (value.item_code==="R" ) { %>
+                                                                    <path id="Polygon_9" data-name="Polygon 9"
+                                                                        d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                        transform="translate(66.667) rotate(90)"
+                                                                        fill="#cf74fc" />
+                                                                    <% } else if (value.item_code==="S" ) { %>
+                                                                        <path id="Polygon_9" data-name="Polygon 9"
+                                                                            d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                            transform="translate(66.667) rotate(90)"
+                                                                            fill="#ffe681" />
+                                                                        <% } else { %>
+                                                                            <path id="Polygon_9" data-name="Polygon 9"
+                                                                                d="M57.773,0,77.031,33.333,57.773,66.667H19.258L0,33.333,19.258,0Z"
+                                                                                transform="translate(66.667) rotate(90)"
+                                                                                fill="#cf74fc" />
+                                                                            <% } %>
+                                            </svg>
+
+                                            <div
+                                                style="position: relative; top:-115%; color:#391A56;text-align:center;z-index:1; margin-left: -26px;">
+                                                <h3
+                                                    style="font-family:'Georgia', sans-serif;;color:#391A56;font-size:20.5px;">
+                                                    <%= item %>
+                                                </h3>
+                                                <p
+                                                    style="font-family:'Noto Sans KR', sans-serif;font-size:11px;line-height:1.1em;margin-top:-20px;font-weight: 800;">
+                                                    <% function formatHollandCode(text) { const textWithNewline=text
+                                                        + '\n' ; const chunks=[]; for (let i=0; i <
+                                                        textWithNewline.length; i +=7) {
+                                                        chunks.push(textWithNewline.slice(i, i + 7)); } return
+                                                        chunks.join('-<br />');
+                                                    }
+                                                    %>
+                                                    <%- formatHollandCode(value.holland_code) %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% }); %>
+                            <% }); %>
+
+                                <!-- table section -->
+                                <table style="width:70%;margin:0px 130px;padding:0px;">
+                                    <tr>
+                                        <td style="width:30%;vertical-align: top;">
+                                            <p
+                                                style="background:#FFECDB;font-family:'Noto Sans KR', sans-serif; font-weight:400;padding:5px 5px 5px 10px;border-radius:8px;">
+                                                Majors
+                                            </p>
+                                            <ul
+                                                style="font-family:'Noto Sans KR', sans-serif;color:#5E5E5E;font-size:11px;line-height:1.4em;text-align:left;list-style:none;margin:0px;padding:0px 0px 0px 10px;">
+                                                <% EDAPPGS006.ResultInfo.combination_3_majors.forEach((item,
+                                                    outerIndex)=> { %>
+                                                    <li style="padding-top:5px;">
+                                                        <%= item %>
+                                                    </li>
+                                                    <% }); %>
+                                            </ul>
+                                        </td>
+                                        <td style="width:70%;vertical-align: top;padding-left:15px;">
+                                            <p
+                                                style="background:#F1F9FF;font-family:'Noto Sans KR', sans-serif; font-weight:400;padding:5px 5px 5px 10px;border-radius:8px;">
+                                                Careers
+                                            </p>
+                                            <table style="width: 100%;margin:0px;padding:0px;">
+                                                <tr>
+                                                    <td>
+                                                        <ul
+                                                            style="font-family:'Noto Sans KR', sans-serif;color:#5E5E5E;font-size:11px;line-height:1.4em;text-align:left;list-style:none;margin:0px;padding:0px 0px 0px 10px;">
+                                                            <% EDAPPGS006.ResultInfo.combination_3_careers.slice(0,
+                                                                30).forEach((item, index)=> { %>
+                                                                <li style="padding-top: 5px;">
+                                                                    <%= item %>
+                                                                </li>
+                                                                <% }); %>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <ul
+                                                            style="font-family:'Noto Sans KR', sans-serif;color:#5E5E5E;font-size:11px;line-height:1.4em;text-align:left;list-style:none;margin-top: -123px;">
+                                                            <%
+                                                                EDAPPGS006.ResultInfo.combination_3_careers.slice(31).forEach(item=>
+                                                                { %>
+                                                                <li style="padding-top: 5px;">
+                                                                    <%= item %>
+                                                                </li>
+                                                                <% }); %>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <section>
+                                    <!-- footer -->
+                                    <footer>
+                                        <table
+                                            style="margin-top:-70px;margin-left:50px;margin-right:5px; border-top: 0.2px solid #391A56;width:87%;">
+                                            <tr>
+                                                <td style="width:80%;">
+                                                    <p
+                                                        style="font-family: 'MontserratAlternates-Bold', sans-serif;color:#391a56;font-size:13px;font-weight: 600;margin:10px 0px 0px 0px;padding:0px;">
+                                                        Aptitude Plus
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p
+                                                        style="font-family:'Georgia', sans-serif;font-style:italic;color:#5E5E5E;font-size:14px;text-align:right;padding-right:10px;margin:5px 0px 0px 0px;padding:0px;">
+                                                        7
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </footer>
+                                </section>
+    </div>
+
+</body>

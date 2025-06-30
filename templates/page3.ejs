@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aptitude Plus - Page 2</title>
+    <style>
+        <%- customFonts %><%- customCSS %>
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <section>
+            <div style="margin-top:75px;">
+                <p
+                    style="font-family:'Noto Sans KR', sans-serif;color:#391A56;font-size:20px;font-weight:800;text-align:center;line-height:1.8em;">
+                    Type and Characteristics of Personality Gene
+                </p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div style="margin-top: 40px; margin-left: -470px;">
+                <!-- row one -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 20px; row-gap: 45px;">
+                    <% // Loop through the genetic_results object
+                        Object.entries(EDAPPGS006.ResultInfo.genetic_results).forEach((entry, outerIndex)=> {
+                        const [key, value] = entry;
+                        const outerLoop = { index: outerIndex }; // Equivalent to outer_loop
+                        const featureName = value.feature_name;
+                        const chunkSize = 16;
+                        const featureChunks = [];
+
+                        // Split the feature_name into chunks of 16 characters with a dash
+                        for (let i = 0; i < featureName.length; i +=chunkSize) { let part=featureName.slice(i, i +
+                            chunkSize); if (i + chunkSize < featureName.length) { part=part + '-' ; }
+                            featureChunks.push(part); } %>
+
+                            <div style="width:220px;">
+                                <!-- card one -->
+                                <div style="border:1px solid #C2C2C2;border-radius:20px;height:235px;">
+                                    <!-- top section -->
+                                    <div
+                                        style="background-color:#f1f9ff;padding:5px 10px 0px 10px;border-radius:20px 20px 0px 0px;border-bottom:1px solid #C2C2C2;">
+                                        <div style="margin-top:-22px;margin-left:18px;z-index:1;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="38.257" height="33.32"
+                                                viewBox="0 0 38.257 33.32">
+                                                <g id="Number-hexagon" transform="translate(-26.871)">
+                                                    <path id="Polygon_3" data-name="Polygon 3"
+                                                        d="M28.693,0l9.564,16.66L28.693,33.32H9.564L0,16.66,9.564,0Z"
+                                                        transform="translate(26.871)" fill="#7b3de8" />
+                                                    <text id="_01." data-name="01." transform="translate(45 22.436)"
+                                                        fill="#fff" font-size="15"
+                                                        font-family="montserratalternatesmedium" font-weight="500">
+                                                        <tspan x="-9.458" y="0">
+                                                            <% if (outerLoop.index===1) { %>
+                                                                01.
+                                                                <% } else if (outerLoop.index===2) { %>
+                                                                    02.
+                                                                    <% } else if (outerLoop.index===3) { %>
+                                                                        03.
+                                                                        <% } else if (outerLoop.index===4) { %>
+                                                                            04.
+                                                                            <% } else if (outerLoop.index===5) { %>
+                                                                                05.
+                                                                                <% } else if (outerLoop.index===6) { %>
+                                                                                    06.
+                                                                                    <% } else { %>
+                                                                                        07.
+                                                                                        <% } %>
+                                                        </tspan>
+                                                    </text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <% if (featureChunks < 16) { %>
+                                            <p
+                                                style="font-family:'Montserrat Alternates', sans-serif;font-size:14px;font-weight: 500;text-align:center;color:#391A56;margin-top:2px;">
+                                                <%= featureName %>
+                                            </p>
+                                            <% } else { %>
+                                                <p
+                                                    style="font-family:'Montserrat Alternates', sans-serif;font-size:14px;font-weight: 500;text-align:center;color:#391A56;margin-top:2px;">
+                                                    <% featureChunks.forEach((part, index)=> { %>
+                                                        <%= part %><br>
+                                                            <% }); %>
+                                                </p>
+                                                <% } %>
+                                    </div>
+
+                                    <!-- body section -->
+                                    <div style="padding:6px 17px;">
+                                        <div style="height:130px;">
+                                            <p
+                                                style="font-family:'Noto Sans KR', sans-serif;font-size:11px;text-align:justify;color:#7F7F7F;padding-top:5px;">
+                                                <%= value.comment %>
+                                            </p>
+                                        </div>
+                                        <div style="margin-left:10px; margin-top: -32px;">
+                                            <p
+                                                style="font-family:'Noto Sans KR', sans-serif;font-size:12px;text-align:justify;color:#262626;font-weight: 600;">
+                                                Gene
+                                            </p>
+                                            <p
+                                                style="font-family:'Montserrat Alternates', sans-serif;font-size:14px;font-style: italic;text-align:justify;color:#7F7F7F; margin-top: -10px;font-weight: 500;">
+                                                <%= value.GENE %>
+                                            </p>
+                                        </div>
+
+                                        <div style="margin-top:-37px;margin-left:90px;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1" height="18.127"
+                                                viewBox="0 0 1 18.127">
+                                                <path id="Path_3948" data-name="Path 3948" d="M0,0V18.127"
+                                                    transform="translate(0.5)" fill="none" stroke="#c2c2c2"
+                                                    stroke-width="1" />
+                                            </svg>
+                                        </div>
+
+                                        <div style="margin-top: -50px;margin-left:110px;">
+                                            <p
+                                                style="font-family:'Noto Sans KR', sans-serif;font-size:12px;text-align:justify;color:#262626;font-weight: 600;">
+                                                Genotype
+                                            </p>
+                                            <p
+                                                style="font-family:'Montserrat Alternates', sans-serif;font-weight: 800;font-size:20px;text-align:justify;color:#391A56;margin-top: -12px;">
+                                                <%= value.genotype %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <table style="margin-top:120px;margin-left:50px;margin-right:5px; border-top: 0.2px solid #391A56;width:87%;">
+            <tr>
+                <td style="width:80%;">
+                    <p
+                        style="font-family: 'MontserratAlternates-Bold', sans-serif;color:#391a56;font-size:13px;font-weight: 400;margin:10px 0px 0px 0px;padding:0px;">
+                        Aptitude Plus</p>
+                </td>
+                <td>
+                    <p
+                        style="font-family:'Georgia', sans-serif;font-style:italic;color:#5E5E5E;font-size:14px;text-align:right;padding-right:10px;margin:5px 0px 0px 0px;padding:0px;">
+                        2</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

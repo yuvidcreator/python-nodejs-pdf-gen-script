@@ -1,0 +1,113 @@
+
+.first-top {
+    padding: 7% 6% 3%;
+    background: #dae8f7;
+}
+.first h1 {
+    font-size: 170%;
+    margin: 0;
+    font-weight: 800;
+}
+.first h2 {
+    font-size: 136%;
+    margin: 10px 0;
+}
+.first .pl-5 h1 {
+    font-size: 27px;
+}
+.first-inner-detail {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    height: 190px;
+}
+.box h4 {
+    font-size: 13px;
+    font-weight: 800;
+}
+.box li {
+    font-size: 11px;
+    line-height: 16px;
+}
+.space-h {
+    height: 46px;
+}
+.second-box {
+    padding: 0 56px;
+}
+.quality-test {
+    margin-top: 40px;
+}
+.quality-test h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.table thead tr th, .table tbody tr th, .table tfoot tr th, .table thead tr td, .table tbody tr td, .table tfoot tr td {
+/*    padding: 8px 0;*/
+padding-bottom: 5px;
+padding-top: 9px;
+line-height: 1.05;
+}
+.table thead tr td, .table tbody tr td, .table tfoot tr td {
+    padding: 10.5px 0;
+
+}
+.table thead tr th {
+    font-weight: 500;
+    background: #deecf9;
+    font-size: 11px;
+
+}
+.table tbody tr td{
+    font-size: 11px;
+}
+
+.bg-color{
+    background: #f0f5fc;
+}
+.heading2 {
+    font-size: 14.6px;
+}
+.heading3 {
+    font-size: 14.6px;
+    border-top: 1px solid #4f4c4d;
+    border-bottom: 1px solid #4f4c4d;
+    padding: 4px 0 8px;
+}
+.first-content{
+/*    border-top: 1px solid #4f4c4d;*/
+/*    border-bottom: 1px solid #4f4c4d;*/
+/*    padding: 4px 0 8px;*/
+    margin-top: -2px;
+    font-weight: 200;
+}
+.first-content h3{
+    font-size: 13.6px;
+}
+.first-content h3 span{
+    height: 8px;
+    font-size: 6px;
+    display: table;
+    vertical-align: middle;
+}
+.first-content p{
+    font-size: 11.2px;
+    line-height: 1.51;
+    text-align: justify;
+    font-family: notosanscjkjplight;
+}
+.table td{
+    font-family: "notosanscjkjplight";
+}
+.pngimgecss{
+    margin-right: -20px;
+}
+
+.ulli::marker {
+    content: "\2022"; /* Unicode character for a bullet point */
+    font-family: Arial, sans-serif; /* Set custom font family */
+    font-size: 16px; /* Set custom font size */
+    color: red; /* Set custom color */
+    margin-right: 8px; /* Adjust spacing between bullet point and text */
+}
